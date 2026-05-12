@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.fromLTRB(16, 20, 16, 8),
               child: Text(
-                'Widget Layout Demo',
+                'Data Mahasiswa UBS',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -173,7 +173,7 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const _DemoLabel('Container Widget'),
+          const _DemoLabel('Tahun Masuk dan Prodi'),
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(16),
@@ -194,7 +194,7 @@ class HomeScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Container dengan Dekorasi',
+                  '2023 dan Teknik Informatika',
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -203,7 +203,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 4),
                 Text(
-                  'Padding, Margin, BoxDecoration, Gradient, dan BoxShadow',
+                  '',
                   style: TextStyle(color: Colors.white70, fontSize: 12),
                 ),
               ],
@@ -223,7 +223,7 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const _DemoLabel('Row Widget (Horizontal Layout)'),
+          const _DemoLabel('Total Matakuliah l IPK l Semester l SKS'),
           Card(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -254,7 +254,7 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const _DemoLabel('Column Widget (Vertical Layout)'),
+          const _DemoLabel('Persentasi Nilai Mata Kuliah'),
           Card(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -287,7 +287,7 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const _DemoLabel('Stack Widget (Overlapping)'),
+          const _DemoLabel('Pembayaran UKT'),
           SizedBox(
             height: 120,
             child: Stack(
@@ -335,7 +335,7 @@ class HomeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Stack Widget',
+                        'Semester 6',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
@@ -344,7 +344,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 4),
                       Text(
-                        'Widget ditumpuk satu di atas\nyang lain menggunakan Stack',
+                        'Pembayaran UKT 4.000.000',
                         style: TextStyle(color: Colors.white60, fontSize: 12),
                       ),
                     ],
@@ -362,7 +362,7 @@ class HomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: const Text(
-                      'Positioned Widget',
+                      'Tagihan Lunas',
                       style: TextStyle(color: Colors.white, fontSize: 11),
                     ),
                   ),
@@ -384,7 +384,7 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const _DemoLabel('Navigasi (Stack Navigation)'),
+          const _DemoLabel('Detail Aplikasi'),
           Row(
             children: [
               Expanded(

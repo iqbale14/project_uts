@@ -102,7 +102,7 @@ class ListViewScreen extends StatelessWidget {
       'prodi': 'Teknik Informatika',
       'ipk': '3.85',
       'icon': Icons.person,
-      'color': Color(0xFF6C63FF),
+      'color': Color.fromARGB(255, 0, 0, 2),
     },
     {
       'nama': 'Siti Rahayu',
@@ -168,7 +168,7 @@ class ListViewScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFF8F9FA),
       appBar: AppBar(
         title: const Text(
-          'Daftar Mahasiswa',
+          'Daftar Mahasiswa UBS',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         backgroundColor: const Color(0xFF6C63FF),
@@ -698,47 +698,51 @@ class ProfileScreen extends StatelessWidget {
         foregroundColor: Colors.white,
         elevation: 0,
       ),
-      body: Column(
-        children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(32),
-            color: const Color(0xFF6C63FF),
-            child: const Column(
-              children: [
-                CircleAvatar(
-                  radius: 50,
-                  backgroundColor: Colors.white24,
-                  child: Icon(Icons.person, size: 60, color: Colors.white),
-                ),
-                SizedBox(height: 12),
-                Text(
-                  'Iqbal Laksamana',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+      // --- PERBAIKAN DI SINI: Tambahkan SingleChildScrollView ---
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(32),
+              color: const Color(0xFF6C63FF),
+              child: const Column(
+                children: [
+                  CircleAvatar(
+                    radius: 50,
+                    backgroundColor: Colors.white24,
+                    child: Icon(Icons.person, size: 60, color: Colors.white),
                   ),
-                ),
-                Text(
-                  'Mahasiswa Teknik Informatika',
-                  style: TextStyle(color: Colors.white70),
-                ),
-              ],
+                  SizedBox(height: 12),
+                  Text(
+                    'Iqbal Laksamana',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'Mahasiswa Teknik Informatika',
+                    style: TextStyle(color: Colors.white70),
+                  ),
+                ],
+              ),
             ),
-          ),
-          const SizedBox(height: 16),
-          _ProfileItem(Icons.badge, 'NIM', '2301111110068'),
-          _ProfileItem(Icons.school, 'Program Studi', 'Teknik Informatika'),
-          _ProfileItem(Icons.calendar_today, 'Semester', '6'),
-          _ProfileItem(Icons.star, 'IPK', '3.75'),
-          _ProfileItem(Icons.email, 'Email', 'iqbal@student.ac.id'),
-        ],
+            const SizedBox(height: 16),
+            _ProfileItem(Icons.badge, 'NIM', '2301111110068'),
+            _ProfileItem(Icons.school, 'Program Studi', 'Teknik Informatika'),
+            _ProfileItem(Icons.calendar_today, 'Semester', '6'),
+            _ProfileItem(Icons.star, 'IPK', '3.75'),
+            _ProfileItem(Icons.email, 'Email', 'iqbal@student.ac.id'),
+            // Tambahkan sedikit jarak di bawah agar tidak mepet navigation bar
+            const SizedBox(height: 20), 
+          ],
+        ),
       ),
     );
   }
 }
-
 class _ProfileItem extends StatelessWidget {
   final IconData icon;
   final String label;
